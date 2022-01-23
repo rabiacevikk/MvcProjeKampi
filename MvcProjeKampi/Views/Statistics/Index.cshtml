@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<br />
+<div class="card-deck">
+    <div class="card text-white bg-info mb-md-4 " style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Toplam Kategori Sayısı</h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.category</h5>
+        </div>
+    </div>
+    <div class="card text-white bg-gradient-olive mb-md-4 " style="width: 18rem">
+        <div class="card-body">
+            <h5 class="card-title">Yazılım Kategorisi Başlık Sayısı</h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.software</h5>
+        </div>
+    </div>
+    <div class="card text-white bg-gradient-red mb-md-4 " style="width: 18rem ">
+        <div class="card-body">
+            <h5 class="card-title"> İsimlerinde "A" Harfi Bulunanlar Yazarların Sayısı</h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.writer</h5>
+        </div>
+    </div>
+
+    <div class="card text-white bg-orange mb-md-4 " style="width: 18rem">
+        <div class="card-body">
+            <h5 class="card-title">En Fazla Başlığı Olan Kategori Adı</h5>
+            <br />
+            <br />
+            <h5 class="card-text"> @ViewBag.heading</h5>
+        </div>
+    </div>
+
+    <div class="card text-white bg-gradient-purple mb-md-4 " style="width: 18rem">
+        <div class="card-body">
+            <h5 class="card-title">Kategoriler Tablosunda T/F Farkı </h5>
+            <br />
+            <h5 class="card-text"> @ViewBag.difference</h5>
+        </div>
+    </div>
+</div>

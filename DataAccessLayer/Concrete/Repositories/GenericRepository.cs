@@ -1,4 +1,5 @@
 ﻿using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete.EntityFramework;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -22,6 +23,11 @@ namespace DataAccessLayer.Concrete.Repositories
         {
             _object.Remove(p);
             c.SaveChanges();
+        }
+
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter); //sadece bir tane değer döndürür
         }
 
         public void Insert(T p)
